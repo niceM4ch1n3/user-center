@@ -1,8 +1,18 @@
 package com.adonis.usercenter.mapper;
 
-import com.adonis.usercenter.model.User;
+import com.adonis.usercenter.model.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+/**
+* @author adonis
+* @description 针对表【user】的数据库操作Mapper
+* @createDate 2024-02-24 15:36:34
+* @Entity generator.domain.User
+*/
 public interface UserMapper extends BaseMapper<User> {
 
 }
+
+
+
+
