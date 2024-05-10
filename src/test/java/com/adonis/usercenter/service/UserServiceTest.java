@@ -35,34 +35,35 @@ public class UserServiceTest {
         String userAccount = "adonis";
         String userPassword = "";
         String checkPassword = "123456";
-        long result = userService.userRegister(userAccount, userPassword, checkPassword);
+        String idCode = "1";
+        long result = userService.userRegister(userAccount, userPassword, checkPassword, idCode);
         Assertions.assertEquals(-1, result);
 
         userAccount = "ad";
-        result = userService.userRegister(userAccount, userPassword, checkPassword);
+        result = userService.userRegister(userAccount, userPassword, checkPassword, idCode);
         Assertions.assertEquals(-1, result);
 
         userAccount = "adonis";
         userPassword = "123456";
-        result = userService.userRegister(userAccount, userPassword, checkPassword);
+        result = userService.userRegister(userAccount, userPassword, checkPassword, idCode);
         Assertions.assertEquals(-1, result);
 
         userAccount = "ado nis";
         userPassword = "12345678";
-        result = userService.userRegister(userAccount, userPassword, checkPassword);
+        result = userService.userRegister(userAccount, userPassword, checkPassword, idCode);
         Assertions.assertEquals(-1, result);
 
         checkPassword = "123456789";
-        result = userService.userRegister(userAccount, userPassword, checkPassword);
+        result = userService.userRegister(userAccount, userPassword, checkPassword, idCode);
         Assertions.assertEquals(-1, result);
 
         userAccount = "1234";
         checkPassword = "12345678";
-        result = userService.userRegister(userAccount, userPassword, checkPassword);
+        result = userService.userRegister(userAccount, userPassword, checkPassword, idCode);
         Assertions.assertEquals(-1, result);
 
         userAccount = "adonis01";
-        result = userService.userRegister(userAccount, userPassword, checkPassword);
+        result = userService.userRegister(userAccount, userPassword, checkPassword, idCode);
         Assertions.assertEquals(-1, result);
     }
 
