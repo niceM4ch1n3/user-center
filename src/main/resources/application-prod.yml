@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: 'jdbc:mysql://47.103.97.94:3306/user_center?allowPublicKeyRetrieval=true'
+  # session失效时间（一天）
+  session:
+    timeout: 86400

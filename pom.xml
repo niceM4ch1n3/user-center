@@ -99,8 +99,10 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.adonis.usercenter.UserCenterApplication</mainClass>
-                    <skip>true</skip>
+<!--                    <mainClass>com.adonis.usercenter.UserCenterApplication</mainClass>-->
+<!--                    <skip>true</skip>-->
+                    <executable>true</executable>
+                    <layout>JAR</layout>
                 </configuration>
                 <executions>
                     <execution>
@@ -108,6 +110,9 @@
                         <goals>
                             <goal>repackage</goal>
                         </goals>
+                        <configuration>
+                            <attach>false</attach>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
